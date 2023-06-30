@@ -20,8 +20,8 @@
     </head>
 
     <body>
-        <div class="container">
-            <div class="row">
+        <div class="container w-100">
+            <div class="row w-75 mx-auto">
                 <div class="col-12">
                     <div class="content">
                         <h5>Paragrafo inserito:</h5>
