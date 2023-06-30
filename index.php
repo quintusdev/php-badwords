@@ -17,10 +17,11 @@
                     <!-- In action richiamo il file PHP e uso il metodo POST per inviare i dati al back-end -->
                     <form class="mt-5" action="myphp.php" method="POST">
                         <input type="text" name="text" id="text">
-                        <textarea name="censored" id="censored" cols="20" rows="2"></textarea>
+                        <textarea name="censored" id="censored" cols="10" rows="1"></textarea>
                         <input type="submit" value="Invia">
                     </form>
                 </div>
+
             </div>
         </div>
     </body>
