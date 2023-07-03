@@ -15,19 +15,12 @@
                 <div class="col-12 p-3 m-2">
                     <h4>Inserisci qui sotto il tuo paragrafo:</h4>
                     <!-- In action richiamo il file PHP e uso il metodo POST per inviare i dati al back-end -->
-<<<<<<< HEAD
-                    <form class="mt-5" action="myphp.php" method="POST">
-                        <input type="text" name="badword" id="text">
-                        <textarea name="censored" id="censored" cols="20" rows="2"></textarea>
-                        <input type="submit" value="Invia">
-=======
                     <form class="mt-5 mx-auto" action="myphp.php" method="POST">
-                        <h5 class="m-1">Inserisci qui la tua frase:</h5><br>
-                        <input type="text" name="text" id="text"><br>
-                        <h5 class="m-1">Inserisci di seguito la parola da censurare:</h5><br>
+                        <h5 class="m-1">Inserisci la parola da censurare:</h5><br>
+                        <input type="text" name="badword" id="text"><br>
+                        <h5 class="m-1">Inserisci il paragrafo:</h5><br>
                         <textarea class="m-1" name="censored" id="censored" cols="30" rows="10"></textarea><br>
                         <input class="btn btn-primary ms-2" type="submit" value="Invia">
->>>>>>> 8a457ab1b52a1b187401415d324cafa260e6e1a2
                     </form>
                 </div>
             </div>
