@@ -1,7 +1,13 @@
 <?php
     /* Nella prima parte dichiaro le variabili e recupero i dati inviati dall'INDEX */
-    $text = $_POST['text'];
+    $badword = $_POST['badword'];
     $censored = $_POST['censored'];
+    /* inserisco in una variabile la lunghezza del testo */
+    $p_lenght = strlen($censored);
+    /* censuro il paragrafo */
+    $censored_p = str_replace($censored, '***', $badword);
+    /* lunghezza del paragrafo censurato */
+    $length_p_cens = strlen($censored_p);
 ?>
 
 <!DOCTYPE html>
@@ -18,17 +24,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <!-- In action richiamo il file PHP e uso il metodo POST per inviare i dati al back-end -->
-                    <h5>Testo Inserito:</h5>
-                    <span><?php echo $text ?></span>
-                <div>
-                    <h5>Lunghezza del testo inserito:</h5>
-                    <span><?php echo strlen($text) ?></span>
-                </div>
-                <div>
-                    <h5>Il tuo paragrafo censurato:</h5>
-                    <span><?php echo str_replace(.$censored, '***', $text); ?></span>
-                </div>
+                    <div>
+                        <!-- In action richiamo il file PHP e uso il metodo POST per inviare i dati al back-end -->
+                        <h5>Paragrafo:</h5>
+                        <!-- Visualizzo il paragrafo -->
+                        <p><?php echo $censored; ?></p>
+                        <!-- Visualizzo la parola da censurare -->
+                        <p><strong>Parola da censurare: </strong> <?php echo $badword; ?></p>
+                        <!-- Visualizzo la lunghezza del paragrafo -->
+                        <p><strong>Lunghezza del paragrafo: </strong> <?php echo $p_lenght; ?></p>
+                    </div>
+                    <hr>
+                    <div>
+                        <!-- In action richiamo il file PHP e uso il metodo POST per inviare i dati al back-end -->
+                        <h5>Paragrafo censurato:</h5>
+                        <!-- Visualizzo il paragrafo -->
+                        <p><?php echo $censored_p; ?></p>
+                        <!-- Visualizzo la lunghezza del paragrafo -->
+                        <p><strong>Lunghezza del paragrafo: </strong> <?php echo $length_p_cens; ?></p>
+                    </div>
                 </div>
             </div>
         </div>
