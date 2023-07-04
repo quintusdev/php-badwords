@@ -5,7 +5,7 @@
     /* inserisco in una variabile la lunghezza del testo */
     $p_lenght = strlen($censored);
     /* censuro il paragrafo */
-    $censored_p = str_replace($censored, '***', $badword);
+    $censored_p = str_replace($badword, '***', $censored);
     /* lunghezza del paragrafo censurato */
     $length_p_cens = strlen($censored_p);
 ?>
